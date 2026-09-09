@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://www.omdbapi.com; img-src 'self' https://m.media-amazon.com https://img.omdbapi.com data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmFinder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+   <div id="popcorn-backdrop"></div>
+   <div id="poster-backdrop"></div>
+   <header class="header">
+        <div class="container">
+               <div class="nav__bar">
+                <div class="nav__logo">
+                <a href="index.html"><img src="assets/logo.svg" alt="FilmFinder Logo"></a>
+                </div>
+                    <nav class="nav__links">
+                    <a class="nav__link" href="index.html">Home</a>
+                    <a class="nav__link" href="results.html">Find-a-Film</a>
+                    <a class="nav__contact" href="#">Contact</a>
+                    </nav>
+                </div>
+            <div class="header__container">
+                <h1 class="header__title">Find-a-<span class="blue-text">Film</span></h1>
+                <p class="header__text">Discover your next watch.</p>
+                <div class="search-bar">
+                    <form id="search-form" role="search">
+                        <input id="search-input" class="search-input" type="search" name="q" placeholder="Browse our Movies..." aria-label="Search">
+                        <button class="search-button" type="submit" >Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="results-section">
+      <div class="container">
+        <div class="row">
+          <div class="movies__header">
+            <h2 id="results-heading">Results For</h2>
+            <select id="filter">
+              <option value="" disabled selected>Sort</option>
+              <option value="RELEASE DATE">Release Date</option>
+              <option value="A-Z">Title (A-Z)</option>
+              <option value="SHOWS">TV Shows</option>
+              <option value="MOVIES">Movies</option>
+            </select>
+          </div>
+          <div id="movie__results"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__row">
+          <a href="#">
+            <figure class="footer__logo">
+              <img src="assets/logo.svg" class="footer__logo--img" alt="FilmFinder Logo">
+            </figure>
+          </a>
+          <div class="footer__list">
+            <a href="index.html" class="footer__link">Home</a>
+            <a href="results.html" class="footer__link">Find-a-Film</a>
+            <a href="#" class="footer__link">Contact</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2026 FilmFinder</div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
